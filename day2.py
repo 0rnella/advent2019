@@ -1,5 +1,5 @@
 
-input = open('./day2-input', 'r').read()
+input = open('./day2-input', 'r').read().split(',')
 
 # Part 1
 
@@ -7,7 +7,6 @@ def int_transformer (st):
     return int(st)
 
 def computer (program):
-    program = program.split(',')
     program_nums = map(int_transformer, program)
 
     marker = 0
@@ -34,4 +33,36 @@ def computer (program):
     
     return program_nums
 
-print(computer(input))
+# print(computer(input))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# I am teaching my partner to code and this is what they 
+# came up with to start to tackle part 2.
+
+# def opcode_extractor(long_list):
+#     total_length = len(long_list)
+#     max_number = total_length // 4
+
+#     short_list = []
+
+#     index = 0
+#     for x in range(max_number):
+#         short_list.append(long_list[index])
+#         index += 4
+
+#     return short_list
+
+# print(opcode_extractor(input))
